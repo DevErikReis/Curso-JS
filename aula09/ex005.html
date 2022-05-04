@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body
+        {
+            background-color: rgb(66, 66, 241);
+            color: white;
+            font:normal 18pt arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Java Script <br></p>
+    <div name="msg"><strong>Clique em mim</strong></div>
+    <script>
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText) // posso retirar o window 
+       // window.alert(p1.innerText) -> essa tag faz criar o alerta, retirei ela por que atrapalha, escolhi o innerText) ao invés do innerHTML por que o innerHTML faz aparecer as tags, elas aparecem escritas.
+       p1.style.color = 'blue'
+       // vou criar uma váriavel agora, e vou utilizar o ID veja abaixo, perceba que está no singular, então não vamos precisar de usar os colchetes. Dentro dos parenteses utilizo o MSG, que é o nome que dei pro ID daquela DIV, lembra como faziamos no hmtl e css? Parecido.
+       //var d =  window.document.getElementById('msg') // pronto, criamos uma váriável.
+      // d.style.color = 'blueviolet'
+       //d.style.background = 'white'
+      // d.innerText = 'Estou aguardando... '// posso modifica o que está escrito dentro da DIV usando o innerText.
+      //window.document.getElementById('msg').innerText = 'Erik é lindo' // posso usar também dessa forma <--
+
+      //posso usar o name também, usei o ID agora vou usar ID ,Name etc...
+
+        var e = window.document.getElementsByName('msg')[0]
+        e.style.background = 'green'
+        e.innerText = "erik lindo" // a tag innerText elá nos deixa escrever no site, mas modificando o quie esta escrito em nossa div.
+    </script>
+
+    
+</body>
+</html>

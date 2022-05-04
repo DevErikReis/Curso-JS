@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Colocamos pt0br para deixar a linguagem de nosso site me português do Brasil.-->
+<head>
+    <meta charset="UTF-8"> <!-- A tag UTF- 8 é a tag para o nosso site tem caracteres, como, acetuações que o português e que outras linguas também tem.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+<style>
+     :root {
+    --cor01: #c5ebd6;
+    --cor02: #83e1ad;
+    --cor03: #3ddc84; 
+    --cor04: #2fa866;
+    
+    --cor05: #1a5c37;
+    --cor06: #063d1e;
+     /* usamos essas tags para criar váriação de cores, você pode colocar o nome que desejar! ex: --leão. */
+    --font-padrão: Arial, Helvetica, sans-serif;  
+     }
+
+    body{
+        background-image: linear-gradient( to right, var(--cor04), var(--cor06), var(--cor02)); /* usamos essa tag para colocar várias cores, fica bem legal*/
+        color: white;
+        font: normal 3em arial; /* pelo que percebi, se eu não colocar os 3 valores o código não funciona! */    }
+        h1 {
+            background-color: black;
+        }
+        p {
+            font-size: 2pc; /* temos vários tipos de tamanho, podemos colocar, pc,px,em e assim vai... */
+        }
+        
+        </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <!-- conforme o professor informou, devemos usar depoís de todo nosso código dentro do body, depois vamos aplicar o script externo, esse no caso seria o interno, ou inline, não sei ao certo.-->
+    <script>
+     
+     var n1 = Number(window.prompt('Digite um número: ')) // pelos motivos descritos nos comentarios abaixo aqui foi reconhecido como string, agora como coloquei o Number.parseInt converti.
+     var n2 =  Number(window.prompt('Digite outro número: '))//   string tbm.  
+     var soma = n1 + n2 
+     window.alert('A soma dos valore é ' + soma) // o "+" nesse caso aqui serviu para concatenação, e não para adição.
+     /* + serve para adição
+      + serve para concatenação
+     quando uso dessa forma (number + number) o JS reconhece adição.
+     quando uso dessa forma (string + string) o JS reconhece concatenação.
+      o window.prompt ele retorna para mim uma string, mesmo que eu digite um número ele trata como uma string 
+     5.5 para o JS é 5 e meio e esse ponto entre os dois número é chamado de ponto flutuante.
+       Number.parselnt(n) para converter para inteiro (converte para um número inteiro)
+       Number.parseFloat(n) para converter para real (converte para um número real)
+       Por algum motivo a minha anotação estava fazendo o nosso código não funcionar.*/
+
+       /*Para conversão de número para string eu posso utilizar dessa forma.
+String(n)
+n.toString()
+window.alert('A soma dos valore é ' + soma.toString()) é preciso fazer igual, com esses parenteses ao lado direito.
+window.alert('A soma dos valore é ' + String(soma)) */
+
+
+
+
+    </script>
+</body>
+</html>
