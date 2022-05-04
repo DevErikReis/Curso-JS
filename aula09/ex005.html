@@ -19,7 +19,7 @@
     <h1>Iniciando os estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em Java Script <br></p>
-    <div name="msg"><strong>Clique em mim</strong></div>
+    <div id="msg"><strong>Clique em mim</strong></div>
     <script>
         var corpo = window.document.body
         corpo.style.background = 'black'
@@ -36,9 +36,22 @@
 
       //posso usar o name também, usei o ID agora vou usar ID ,Name etc...
 
-        var e = window.document.getElementsByName('msg')[0]
-        e.style.background = 'green'
-        e.innerText = "erik lindo" // a tag innerText elá nos deixa escrever no site, mas modificando o quie esta escrito em nossa div.
+        //var e = window.document.getElementsByName('msg')[0]
+        //e.style.background = 'green'
+        //e.innerText = "erik lindo" // a tag innerText elá nos deixa escrever no site, mas modificando o quie esta escrito em nossa div.
+       /* var f = window.document.getElementsByClassName ('msg')[0]
+        f.style.background = 'green'
+        f.style.color = 'blue'
+        f.innerText = 'erik lindo s2 carine'*/
+        var f = window.document.querySelector('div#msg') //Toda DIV é representada por #, toda classe é representada por ponto final. ex: ('div.msg')
+        // ID -> #
+        // Class -> .
+        f.style.color = 'blue'
+        f.style.background = 'white'
+        f.innerHTML = 'carine linda '
+        //lembrando que funciona apenas com ID, por que colocamos # se fosse com ponto seria class. Fiz o teste agora mesmo com o ponto final e mudei la na div para class e deu certo.
+        
+
     </script>
 
     
