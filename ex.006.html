@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background: rgb(74, 255, 2);
+            color: rgb(0, 0, 0); 
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* A propriedade CSS line-height permite controlar o espaçamento entre as linhas de um texto. A distância é medida entre as linhas de base (baseline) de duas linhas consecutivas.*/ 
+            text-align: center;           
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação do usuário. Cada evento aconteceu é  de informações Evente pode ter outros campos que é baseado na interface, e pode ser usado para obter informações adicionais sobre o que é personalizado. Eventos podem apresentar desde novidades, apresentação do usuário até notificações automáticas de novidades no DOM. 
+Esse artigo apresenta uma lista de eventos que podem ser enviados; alguns são programados eventos em especificações oficiais, enquanto outros são usados internamente por navegadores específicos; Por exemplo, os eventos da Mozilla são organizados de modo que plugins e complementos podem ser usados para interagir com o navegador.
+    -->
+     <!--<div id="area" onclick="clicar()"> serve para disparar a ação que eu informei exatamente quando eu clicar em cima.
+         onmouseenter="entrar()"> significa, "quando o mouse entrar" para executar devo executar outra function.
+        onmouseout="sair() é quando o mouse sair.-->
+    
+    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()
+         tem como subistituir esse código usando o ddEventListener, veja abaixo no Script. Vou deixar como comentário tudo que estava dentro da DIV, ao lado dela mesma.--> 
+       
+        <!--Esse comando serve para disparar o click.-->
+        interaja... 
+    </div>
+    <script>
+
+     
+
+         /*tudo que tier aqui dentro somente vai ser executado quando eu chamar o clicar.
+            Quando eu executo o """var a = window.document.getElementById('area')""" dentro do function, a variável "a" ela só servirá para aquele function, mas se eu deixo ao lado de fora, ele serve para todos, então essa váriavel irá servir para o outro function*/
+
+        var a = window.document.getElementById('area') // deixei ela do lado de fora, para funcionar para todos os function
+      
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        //Usamos o addEventListener para executar o mesmo que foi feito com os comando que usamos dentro da DIV logo acima. <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()>
+            // LEMBRANDO QUE DEVO EXECUTAR LOGO ABAIXO DA MINHA VARIÁVEL, SE FOR EM CIMA O COMANDO NÃO FUNCIONARÁ.
+
+        function clicar() {
+        
+            
+            a.innerText = 'clicou!' 
+            /* esse código essa ligado com o código de cima, agora, quando eu clicar irá mudar a minha frase para clicou conforme eu configurei.*/
+            a.style.background='red'
+        }
+            function entrar() {
+                a.innerText = "Entrou!"           
+
+        }
+        function sair() {
+            a.innerText= 'sair'
+            a.style.background='green'
+        }
+
+    // o efeito aqui que deu: quando coloco o mouse dentro faz uma ação, quando tiro faz outra e quando clico também. E agora também muda de cor.
+
+
+        
+    </script>
+
+    
+</body>
+</html>

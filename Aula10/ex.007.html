@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+<h1>Somando valores</h1>
+<input type="number" name="txtn1" id="txtn1"> +
+<input type="number" name="txtn2" id="txtn2">
+<input type="button" value="somar" onclick="somar()">
+<div id="res">Resultado</div>
+<script>
+    function somar() {
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+        /* igual esta da forma anterior e da forma a seguir, posso das duas formas, usando o getElementById ou o querySelector, porem com querySelector devo acrescenta ali o parenteses. .
+        var tn2 = window.document.getElementById('txtn2') 
+        Agora preciso colocar um valor para as minhas variáveis n1 e n2*/
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2 // aqui você deve colocar o simbolo do tipo de operação que você deseja que seja executada. mais, menos, vezes, dividir etc...
+        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a ${s}` // então aqui, após a soma irá aparecer essa informação, com os números que o usuário colocou e o resultado.
+        // aqui coloca = s por conta de ser a variavel que criamos logo acima, mas posso colocar de outroa forma, conforme está agora.
+        // Aqui eu não preciso de colocar um valor para a variável, no caso que vai colocar é o usuário, ali no number eu atribui um valor, mas será o valor que o usuário desejar.
+
+    }
+</script>
+
+    
+</body>
+</html>
